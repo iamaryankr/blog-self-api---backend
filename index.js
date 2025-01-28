@@ -2,11 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from 'cors';
 
-app.use(cors());
 
 
 const app = express();
 const port = 4000; 
+app.use(cors());
 
 // In-memory data store
 let posts = [
