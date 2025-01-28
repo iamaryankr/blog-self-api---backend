@@ -3,8 +3,10 @@ import bodyParser from "body-parser";
 import cors from 'cors';
 
 const app = express();
-const port = 4000; 
-app.use(cors());
+const port = 4000 || process.env.PORT; 
+
+app.use(cors({ origin: 'https://blog-self-api-frontend.vercel.app', credentials: true }));
+
 
 // In-memory data store
 let posts = [
